@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light-only, professional monotone with pink accent */
+:root {
+  --bg: 255 255 255;
+  --fg: 17 24 39;       /* gray-900 */
+  --muted: 107 114 128; /* gray-500 */
+  --border: 229 231 235;/* gray-200 */
+  --card: 255 255 255;
+  --accent: 236 72 153; /* pink-500 */
+}
+
+/* Force light color scheme */
+html { color-scheme: light; }
+
+body {
+  @apply bg-white text-gray-900 antialiased;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Typography */
+.prose {
+  @apply prose-zinc max-w-none;
+}
+.prose a {
+  @apply text-accent-600 hover:text-accent-700 no-underline border-b border-accent-200 hover:border-accent-400 transition;
+}
+.prose code {
+  @apply rounded bg-gray-100 px-1 py-0.5;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-md bg-accent-500 px-4 py-2 text-white shadow-subtle hover:bg-accent-600 focus:outline-none focus:ring-2 focus:ring-accent-500/40 transition;
+}
+
+/* Cards */
+.card {
+  @apply rounded-xl border border-gray-200 bg-white p-6 shadow-subtle;
+}
