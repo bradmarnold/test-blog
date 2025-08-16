@@ -1,0 +1,22 @@
+---
+const base = import.meta.env.BASE_URL;
+const nav = [
+  { href: base, label: 'Home' }
+];
+---
+<header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-gray-200">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6">
+    <div class="flex h-16 items-center justify-between">
+      <a href={base} class="font-semibold tracking-tight text-gray-900">
+        <span class="text-gray-900">Your Blog</span>
+        <span class="sr-only">Home</span>
+      </a>
+      <nav class="flex items-center gap-6 text-sm text-gray-600">
+        {nav.map((n) => (
+          <a href={n.href} class="hover:text-gray-900 transition">{n.label}</a>
+        ))}
+        <a href={`${base}rss.xml`} class="text-accent-600 hover:text-accent-700">RSS</a>
+      </nav>
+    </div>
+  </div>
+</header>

@@ -9,13 +9,13 @@ A professional, minimalist Astro + Tailwind + MDX blog with a pink accent. Deplo
 
 ## Posting a new article
 
-1. Go to `src/content/blog/` and click “Add file” → “Create new file”.
+1. In GitHub, go to `src/content/blog/` and click “Add file” → “Create new file”.
 2. Name it like `my-post.mdx`.
 3. Add frontmatter and content, then commit to `main`.
 
 Example:
 
-```mdx
+---START MDX EXAMPLE---
 ---
 title: "My First Post"
 description: "A quick intro"
@@ -29,7 +29,7 @@ Write in Markdown or MDX. You can embed JSX, code blocks, images, and more.
 ```ts
 export const hello = (name: string) => `Hello, ${name}!`;
 ```
-```
+---END MDX EXAMPLE---
 
 ## Local development
 
